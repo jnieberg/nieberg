@@ -1,0 +1,37 @@
+#competences {
+  [role="tablist"] {
+    [role="tab"] {
+      font-size: 0.8em;
+      position: relative;
+      left: -1em;
+      border: 0;
+      background-color: #ffffff;
+      &:focus {
+        font-weight: bold;
+        background-color: #ffeecc;
+        transform: scale(1.1);
+        z-index: 1;
+        + * + * + * + * + [role="tabpanel"] {
+          padding: 1rem 0 0;
+          max-height: 800px;
+        }
+      }
+    }
+
+    [role="tabpanel"] {
+      display: grid;
+      max-height: 0;
+      overflow-y: hidden;
+      grid-template-columns: 7em calc(50% - 7em) 7em calc(50% - 7em);
+      transition: all 0.3s;
+
+      &.pairs > * {
+        grid-column: span 2;
+      }
+
+      @media screen and (max-width: 768px) {
+        grid-template-columns: 7em auto;
+      }
+    }
+  }
+}

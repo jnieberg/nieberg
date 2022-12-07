@@ -1,0 +1,55 @@
+#menu {
+  font-size: 2rem;
+  position: fixed;
+  padding: 0.5rem;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+
+  :focus + nav,
+  nav:has(:hover),
+  nav:has(:focus) {
+    right: 0%;
+  }
+
+  > button {
+    border: 0;
+    background: transparent;
+    color: #551a8b;
+  }
+
+  nav {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+    border-left: solid 1px #ddbb88;
+    box-shadow: 0 5px 10px 0 rgba(#884400, 0.2);
+    opacity: 1;
+    padding: 0.5rem;
+    right: -110%;
+    top: 0;
+    bottom: 0;
+
+    > a {
+      color: #996633;
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  a,
+  button {
+    display: block;
+    padding: 1rem;
+    line-height: 1rem;
+
+    &:hover,
+    &:focus {
+      > .fa {
+        color: #551a8b;
+        transform: scale(1.2) rotate(10deg);
+      }
+    }
+  }
+}

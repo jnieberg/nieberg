@@ -1,0 +1,62 @@
+#career {
+  article {
+    position: absolute;
+    height: 100%;
+  }
+
+  [role="tablist"] {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+
+    [role="tab"] {
+      position: relative;
+      font-size: 0.8em;
+      border: solid 1px #ccaa88;
+      border-radius: 50%;
+      padding: 0.5em;
+      background-color: #ffffff;
+      z-index: 1;
+
+      &:focus {
+        font-weight: bold;
+        background-color: #ffeecc;
+        border-color: #884400;
+        transform: scale(1.1);
+        z-index: 2;
+        + * + * + * + * + [role="tabpanel"] {
+          left: 0;
+        }
+      }
+      [role="tabpanel"]:focus {
+        left: 0;
+      }
+    }
+  }
+
+  [role="tabpanel"] {
+    display: flex;
+    flex-direction: column;
+    align-content: stretch;
+    justify-content: center;
+    position: absolute;
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
+    inset: 0;
+    bottom: 2rem;
+
+    left: -100%;
+    transition: all 1s;
+
+    &.pairs > * {
+      grid-column: span 2;
+    }
+
+    @media screen and (max-width: 768px) {
+      top: 7rem;
+      bottom: 1rem;
+      height: calc(100% - 8rem);
+    }
+  }
+}

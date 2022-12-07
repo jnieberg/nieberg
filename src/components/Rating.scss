@@ -1,0 +1,48 @@
+@keyframes wobble {
+  0% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(355deg);
+  }
+}
+@keyframes blink {
+  0% {
+    color: #442200;
+  }
+  80% {
+    color: #442200;
+  }
+  90% {
+    color: #cc6600;
+  }
+  100% {
+    color: #442200;
+  }
+}
+
+.rating {
+  .fa-solid {
+    animation-name: wobble, blink;
+    animation-timing-function: cubic-bezier(0.8, 0, 0, 0.8), ease-in-out;
+    animation-duration: 10s, 5s;
+    animation-iteration-count: infinite, infinite;
+    animation-direction: normal, alternate;
+    &::before {
+      position: relative;
+      top: -1px;
+    }
+  }
+  .fa-solid + .fa-solid {
+    animation-delay: 0.2s;
+    + .fa-solid {
+      animation-delay: 0.4s;
+      + .fa-solid {
+        animation-delay: 0.6s;
+        + .fa-solid {
+          animation-delay: 0.8s;
+        }
+      }
+    }
+  }
+}
