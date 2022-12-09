@@ -3,10 +3,8 @@ import { Link } from "react-router-dom";
 import Fa from "./Fa";
 
 const Menu = () => (
-  <div id="menu">
-    <button aria-label="Open menu">
-      <Fa icon="hamburger" />
-    </button>
+  <button id="menu" aria-label="Open menu" tabIndex={1}>
+    <Fa icon="hamburger" />
     <nav>
       <Link to="/" aria-label="About me">
         <Fa icon="home-user" />
@@ -21,7 +19,7 @@ const Menu = () => (
         <Fa icon="briefcase" />
       </Link>
     </nav>
-  </div>
+  </button>
 );
 
 export default Menu;

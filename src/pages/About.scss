@@ -1,18 +1,43 @@
 #about {
-  img {
+  .info {
+    font-size: 80%;
+    display: grid;
+    grid-template-columns: 1.5rem calc(50% - 1.5rem) 1.5rem calc(50% - 1.5rem);
+    align-items: center;
+    i,
+    img {
+      width: 1rem;
+      font-size: 1rem;
+      color: #886644;
+    }
+    @media screen and (min-width: 768px) {
+      grid-template-columns: 1.5rem calc(25% - 1.5rem) 1.5rem calc(75% - 1.5rem);
+    }
+  }
+
+  .image {
+    background-image: url("../../public/me/jorg-bw.png");
+    background-size: 300px;
     float: right;
     width: 300px;
-    border: solid 0.5rem #ff8800;
+    height: 300px;
     border-radius: 50%;
     margin-left: 1rem;
-    margin-top: -4rem;
+    margin-top: -11rem;
     margin-bottom: 0.5rem;
+    border: solid 0.5rem #bb8833;
+    text-align: center;
 
     @media screen and (max-width: 768px) {
       float: none;
-      width: calc(100% - 1rem);
-      margin-left: 0;
+      display: block;
+      background-size: calc(80vw - 6rem);
+      width: calc(80vw - 6rem);
+      height: calc(80vw - 6rem);
+      margin-left: auto;
+      margin-right: auto;
       margin-top: 0;
+      border-width: 1.5vw;
     }
   }
 }

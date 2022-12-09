@@ -1,56 +1,49 @@
+import { Swiper, SwiperSlide } from "swiper/react";
 import Card from "../components/Card";
+import "swiper/css";
 import "./Career.scss";
 
 const Career = () => {
   return (
-    <div id="career" className="page">
-      <article>
-        <h1>Career Highlights</h1>
-        <div role="tablist">
-          <button id="tab-1" role="tab" aria-controls="tabpanel-1" autoFocus></button>
-          <button id="tab-2" role="tab" aria-controls="tabpanel-2"></button>
-          <button id="tab-3" role="tab" aria-controls="tabpanel-3"></button>
-          <button id="tab-4" role="tab" aria-controls="tabpanel-4"></button>
-          <button id="tab-5" role="tab" aria-controls="tabpanel-5"></button>
-
-          <div id="tabpanel-1" className="tabpanel" role="tabpanel" aria-labelledby="tab-1">
-            <Card
-              title="Eikelenboom B.V."
-              heading="February 2002 - November 2002"
-              image="/career/eikelenboom.jpg"
-              text="Invoice handling at the sales department"
-            />
-          </div>
-          <div id="tabpanel-2" className="tabpanel" role="tabpanel" aria-labelledby="tab-2">
-            <Card
-              title="Eperium Business Solution"
-              heading="November 2002 - December 2016"
-              image="/career/eperium.jpg"
-              text="Frontend Developer / Usability Specialist"
-            />
-          </div>
-          <div id="tabpanel-3" className="tabpanel" role="tabpanel" aria-labelledby="tab-3">
-            <Card title="Salmon Netherlands" heading="December 2016 - March 2019" image="/career/salmon.jpg" text="Medior Frontend Developer" />
-          </div>
-          <div id="tabpanel-4" className="tabpanel" role="tabpanel" aria-labelledby="tab-4">
-            <Card
-              title="Wunderman Thompson Commerce"
-              heading="March 2019 - May 2020"
-              image="/career/wunderman.png"
-              text="Medior Frontend Developer"
-            />
-          </div>
-          <div id="tabpanel-5" className="tabpanel" role="tabpanel" aria-labelledby="tab-5">
-            <Card
-              title="Kabisa Software Artisans"
-              heading="May 2020 - present"
-              image="/career/kabisa.png"
-              text="Medior Frontend Developer / Consultant"
-            />
-          </div>
-        </div>
-      </article>
-    </div>
+    <article id="career" className="page">
+      <h1>Career Highlights</h1>
+      <Swiper slidesPerView={1}>
+        <SwiperSlide>
+          <Card
+            image="/career/eikelenboom.jpg"
+            title="Eikelenboom B.V."
+            heading="Invoice handling at the sales department"
+            subheading="February 2002 - November 2002"
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Card
+            image="/career/eperium.jpg"
+            title="Eperium Business Solution"
+            heading="Frontend Developer / Usability Specialist."
+            subheading="November 2002 - December 2016"
+            text="Responsible for building user-friendly, front-end webshops with an eCommerce product called Intershop."
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Card
+            image="/career/wunderman.png"
+            title="Wunderman Thompson Commerce"
+            heading="Medior Frontend Developer"
+            subheading="March 2019 - May 2020"
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Card
+            image="/career/kabisa.png"
+            title="Kabisa Software Artisans"
+            heading="Medior Frontend Developer / Consultant"
+            subheading="May 2020 - present"
+            text="As a Front-end Developer I am part of a multidisciplinary SCRUM team that iteratively delivers software to the customers. Examples of projects you will be working on vary from mobile to desktop applications, from community websites and webshops to reservation systems and chat applications. Together with the team I was responsible for designing, realising, delivering and maintaining working software. I contribute to the continuous improvement of the development process and the organisation. I consciously apply the co-creation process and am prepared to apply new techniques. I can fulfil different roles, like technical designer, developer and consultant."
+          />
+        </SwiperSlide>
+      </Swiper>
+    </article>
   );
 };
 

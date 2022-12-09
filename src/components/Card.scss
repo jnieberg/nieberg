@@ -12,10 +12,20 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
   height: 100%;
 
   > * {
     position: relative;
     z-index: 0;
+    max-width: 70%;
+
+    @media screen and (max-width: 768px) {
+      max-width: initial;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 1rem;
   }
 }

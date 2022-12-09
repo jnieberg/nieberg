@@ -1,26 +1,22 @@
 #menu {
-  font-size: 2rem;
   position: fixed;
-  padding: 0.5rem;
+  font-size: 2rem;
+  padding: 0;
   top: 0;
   right: 0;
-  bottom: 0;
+  width: 5rem;
+  height: 5rem;
+  border: 0;
+  background: transparent;
+  color: #551a8b;
   z-index: 999;
 
-  :focus + nav,
-  nav:has(:hover),
-  nav:has(:focus) {
-    right: 0%;
-  }
-
-  > button {
-    border: 0;
-    background: transparent;
-    color: #551a8b;
+  &:focus-within > nav {
+    right: 0;
   }
 
   nav {
-    position: absolute;
+    position: fixed;
     display: flex;
     flex-direction: column;
     background: #ffffff;
@@ -28,9 +24,10 @@
     box-shadow: 0 5px 10px 0 rgba(#884400, 0.2);
     opacity: 1;
     padding: 0.5rem;
-    right: -110%;
+    right: -6rem;
     top: 0;
     bottom: 0;
+    width: 4rem;
 
     > a {
       color: #996633;
