@@ -26,8 +26,8 @@ const About = () => (
       <strong>Let me introduce myself,</strong> my name is{" "}
       <a href="https://www.linkedin.com/in/jorg-nieberg-216ba621/" aria-details="Go to the LinkedIn page of Jorg Nieberg" target="_new">
         Jorg Nieberg
-      </a>
-      . 46 years old. I have lived in Weesp for the same amount of years, and I am currently married and living together with my beautiful wife
+      </a>{" "}
+      and I am 46 years old. I have lived in Weesp for the same amount of years, and I am currently married and living together with my lovely wife
       Lisette. I have two beautiful daughters called Elvy and Leia (resp. 5 and 2 years old). I like playing computer games, but occasionally also
       like to create them as one of my favourite hobbies. Pasta, pizza and sushi are things you can always invite me for, even in the middle of the
       night.

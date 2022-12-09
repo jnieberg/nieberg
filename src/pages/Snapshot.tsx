@@ -20,7 +20,7 @@ const Snapshot = () => (
           A healthy ambition in Dialogflow, Google Voice Assistance and other <strong>chatbot</strong> solutions.
         </li>
         <li>
-          Working with <strong>design systems</strong> that will visualize web shops on a code level, before the start of the project.
+          Working with <strong>design systems</strong> that will visualize webshops on a code level, before the start of the project.
         </li>
         <li>
           Working and coding <strong>optimally</strong> and <strong>consistently</strong>.
