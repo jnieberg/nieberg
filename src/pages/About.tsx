@@ -7,19 +7,23 @@ const About = () => (
     <h1>Jorg Nieberg</h1>
     <div className="info">
       <Fa icon="earth" />
-      <span>Weesp, NL</span>
+      <div>Weesp, NL</div>
       <Fa icon="flag" />
-      <span>Dutch</span>
+      <div>Dutch</div>
       <Fa icon="birthday-cake" />
-      <span>10 November 1976</span>
+      <div>10 November 1976</div>
       <Fa icon="envelope" />
-      <a href="mailto:jnieberg@gmail.com">jnieberg@gmail.com</a>
+      <div>
+        <a href="mailto:jnieberg@gmail.com">jnieberg@gmail.com</a>
+      </div>
       <Fa icon="phone" />
-      <span>+31 6 102 12 779</span>
+      <div>+31 6 102 12 779</div>
       <Svg icon="linkedin" />
-      <a href="https://www.linkedin.com/in/jorg-nieberg-216ba621/" target="_new">
-        linkedin.com
-      </a>
+      <div>
+        <a href="https://www.linkedin.com/in/jorg-nieberg-216ba621/" target="_new">
+          linkedin.com
+        </a>
+      </div>
     </div>
     <p>
       <a href="/me/jorg.png" className="image" target="_new" />
