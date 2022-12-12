@@ -23,6 +23,7 @@ body {
   a,
   button,
   i,
+  li,
   nav {
     transition: all 0.3s;
   }
@@ -60,8 +61,8 @@ body {
   }
 
   a,
-  button {
-    display: inline-block;
+  button,
+  li {
     outline-width: 3px;
     outline-color: rgba(#ff8800, 0);
     outline-offset: 1px;

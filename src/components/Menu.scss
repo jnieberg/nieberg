@@ -1,4 +1,19 @@
+.tilthover {
+  display: block;
+  padding: 1rem;
+  line-height: 1rem;
+
+  &:hover,
+  &:focus {
+    > .fa {
+      color: #551a8b;
+      transform: scale(1.2) rotate(10deg);
+    }
+  }
+}
+
 #menu {
+  @extend .tilthover;
   position: fixed;
   font-size: 2rem;
   padding: 0;
@@ -13,6 +28,10 @@
 
   &:focus-within > nav {
     right: 0;
+  }
+
+  .fa::before {
+    text-shadow: 0 0 0.5rem #ffffff, 0 0 1rem #ffffff, 0 0 1.5rem #ffffff;
   }
 
   nav {
@@ -35,18 +54,7 @@
     }
   }
 
-  a,
-  button {
-    display: block;
-    padding: 1rem;
-    line-height: 1rem;
-
-    &:hover,
-    &:focus {
-      > .fa {
-        color: #551a8b;
-        transform: scale(1.2) rotate(10deg);
-      }
-    }
+  a {
+    @extend .tilthover;
   }
 }

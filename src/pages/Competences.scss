@@ -1,29 +1,36 @@
 #competences {
-  [role="tablist"] {
+  .react-tabs {
+    [role="tablist"] {
+      padding: 0;
+    }
     [role="tab"] {
+      display: inline-block;
       font-size: 0.8em;
       position: relative;
       left: -1em;
-      border: 0;
       background-color: #ffffff;
-      &:focus {
+      font-family: "Kdam Thmor Pro", sans-serif;
+      color: #442200;
+      padding: 0.5rem 1rem;
+      border-radius: 0.3rem;
+      cursor: pointer;
+
+      &[aria-selected="true"] {
         font-weight: bold;
         background-color: #ffeecc;
         transform: scale(1.1);
         z-index: 1;
-        + * + * + * + * + [role="tabpanel"] {
-          padding: 1rem 0 0;
-          max-height: 800px;
-        }
       }
     }
 
     [role="tabpanel"] {
       display: grid;
-      max-height: 0;
-      overflow-y: hidden;
       grid-template-columns: 7em calc(50% - 7em) 7em calc(50% - 7em);
-      transition: all 0.3s;
+      transition: opacity 0.3s;
+
+      &:empty {
+        opacity: 0;
+      }
 
       &.pairs > * {
         grid-column: span 2;

@@ -22,7 +22,7 @@ const About = () => (
       </a>
     </div>
     <p>
-      <span className="image" />
+      <a href="/me/jorg.png" className="image" target="_new" />
       <strong>Let me introduce myself,</strong> my name is{" "}
       <a href="https://www.linkedin.com/in/jorg-nieberg-216ba621/" aria-details="Go to the LinkedIn page of Jorg Nieberg" target="_new">
         Jorg Nieberg
