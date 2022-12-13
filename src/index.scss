@@ -62,12 +62,13 @@ body {
 
   a,
   button,
-  li {
+  [role="tab"] {
     outline-width: 3px;
     outline-color: rgba(#ff8800, 0);
-    outline-offset: 1px;
+    outline-offset: 3px;
     &:hover {
       color: #884400;
+      cursor: pointer;
     }
     &:focus {
       outline-color: #ff8800;

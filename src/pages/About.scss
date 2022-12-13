@@ -19,18 +19,22 @@
 
   .image {
     position: relative;
+    background-color: #ffeedd;
     background-image: url("../../public/me/jorg-bw.png");
     background-size: 240px;
     float: right;
     width: 240px;
     height: 240px;
     border-radius: 50%;
-    margin-left: 1rem;
-    margin-top: -10rem;
-    margin-bottom: 0.5rem;
+    margin: -10rem 0 0.5rem 1rem;
     border: solid 0.5rem #886644;
     text-align: center;
     z-index: 1;
+
+    &:hover {
+      background-color: #ffffff;
+      border-color: #ccaa88;
+    }
 
     @media screen and (max-width: 768px) {
       float: none;
@@ -38,9 +42,7 @@
       background-size: calc(80vw - 6rem);
       width: calc(80vw - 6rem);
       height: calc(80vw - 6rem);
-      margin-left: auto;
-      margin-right: auto;
-      margin-top: 0;
+      margin: 0 auto 1rem;
       border-width: 1.5vw;
     }
   }

@@ -1,10 +1,13 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import "./Menu.scss";
 import { Link } from "react-router-dom";
 import Fa from "./Fa";
 
 const Menu = () => (
-  <button id="menu" aria-label="Open menu" tabIndex={1}>
-    <Fa icon="hamburger" />
+  <div id="menu">
+    <a aria-label="Open menu" tabIndex={0}>
+      <Fa icon="hamburger" />
+    </a>
     <nav>
       <Link to="/" aria-label="About me">
         <Fa icon="home-user" />
@@ -19,7 +22,7 @@ const Menu = () => (
         <Fa icon="briefcase" />
       </Link>
     </nav>
-  </button>
+  </div>
 );
 
 export default Menu;

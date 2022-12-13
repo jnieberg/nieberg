@@ -7,7 +7,6 @@ import Career from "./pages/Career";
 
 const App = () => (
   <>
-    <Main />
     <Routes>
       <Route path="/">
         <Route index element={<About />} />
@@ -17,6 +16,7 @@ const App = () => (
         <Route path="*" element={<p>There's nothing here: 404!</p>} />
       </Route>
     </Routes>
+    <Main />
   </>
 );
 
