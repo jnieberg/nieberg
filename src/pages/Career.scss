@@ -1,13 +1,32 @@
 #career {
-  min-height: 600px;
+  max-height: calc(100vh - 8rem - 2px);
+
+  @media screen and (max-width: 768px) {
+    max-height: calc(100vh - 4rem - 2px);
+  }
 
   h2 {
     color: #886644;
   }
 
-  .swiper {
-    position: absolute;
-    inset: 0;
-    margin: 0;
+  .carousel {
+    margin: 0 -2rem -2rem;
+    padding-top: calc(100vh - 10rem - 2px);
+
+    @media screen and (max-width: 768px) {
+      margin: 0 -1.5rem -1.5rem;
+      padding-top: calc(100vh - 6.5rem - 2px);
+    }
+
+    &::before,
+    &::after,
+    .carousel__prev,
+    .carousel__next {
+      margin-top: calc((100vh - 10rem - 2px) / 2);
+
+      @media screen and (max-width: 768px) {
+        margin-top: calc((100vh - 6.5rem - 2px) / 2);
+      }
+    }
   }
 }
