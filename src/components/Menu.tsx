@@ -21,6 +21,10 @@ const Menu = () => (
       <Link to="career" aria-label="Career Highlight">
         <Fa icon="briefcase" />
       </Link>
+      <div className="stretch"></div>
+      <Link to="showcase" aria-label="Personal Showcase">
+        <Fa icon="gamepad" />
+      </Link>
     </nav>
   </div>
 );

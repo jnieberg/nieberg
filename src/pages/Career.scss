@@ -28,5 +28,9 @@
         margin-top: calc((100vh - 6.5rem - 2px) / 2);
       }
     }
+
+    .card-image > img {
+      opacity: 0.2;
+    }
   }
 }

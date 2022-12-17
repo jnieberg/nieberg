@@ -4,6 +4,7 @@ import Main from "./Main";
 import Competences from "./pages/Competences";
 import Snapshot from "./pages/Snapshot";
 import Career from "./pages/Career";
+import Showcase from "./pages/Showcase";
 
 const App = () => (
   <>
@@ -13,6 +14,7 @@ const App = () => (
         <Route path="competences" element={<Competences />} />
         <Route path="snapshot" element={<Snapshot />} />
         <Route path="career" element={<Career />} />
+        <Route path="showcase" element={<Showcase />} />
         <Route path="*" element={<p>There's nothing here: 404!</p>} />
       </Route>
     </Routes>

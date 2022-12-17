@@ -20,17 +20,17 @@ const About = () => (
       <div>+31 6 102 12 779</div>
       <Svg icon="linkedin" />
       <div>
-        <a href="https://www.linkedin.com/in/jorg-nieberg-216ba621/" target="_new">
+        <a href="https://www.linkedin.com/in/jorg-nieberg-216ba621/" target="_blank" rel="noreferrer">
           linkedin.com
         </a>
       </div>
     </div>
     <p>
-      <a href="/me/jorg.png" className="image" target="_new" aria-label="portrait of Jorg Nieberg">
+      <a href="/me/jorg.png" className="image" target="_blank" aria-label="portrait of Jorg Nieberg">
         {" "}
       </a>
       <strong>Let me introduce myself,</strong> my name is{" "}
-      <a href="https://www.linkedin.com/in/jorg-nieberg-216ba621/" aria-label="LinkedIn page of Jorg Nieberg" target="_new">
+      <a href="https://www.linkedin.com/in/jorg-nieberg-216ba621/" aria-label="LinkedIn page of Jorg Nieberg" target="_blank" rel="noreferrer">
         Jorg Nieberg
       </a>{" "}
       and I am 46 years old. I have lived in Weesp for the same amount of years, and I am currently married and living together with my lovely wife

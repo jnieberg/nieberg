@@ -1,4 +1,4 @@
-@keyframes tonext {
+@keyframes nextSlide {
   75% {
     left: 0;
   }
@@ -13,7 +13,7 @@
   }
 }
 
-@keyframes tostart {
+@keyframes startSlide {
   75% {
     left: 0;
   }
@@ -28,7 +28,7 @@
   }
 }
 
-@keyframes snap {
+@keyframes snapSlide {
   96% {
     scroll-snap-align: center;
   }
@@ -92,6 +92,7 @@
   left: 0;
   display: flex;
   overflow-x: scroll;
+  overflow-y: hidden;
   counter-reset: item;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
@@ -102,16 +103,6 @@
   flex: 0 0 100%;
   width: 100%;
   counter-increment: item;
-}
-
-.carousel__slide:before {
-  content: counter(item);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate3d(-50%, -40%, 70px);
-  color: #fff;
-  font-size: 2em;
 }
 
 .carousel__snapper {
@@ -125,14 +116,14 @@
 
 @media (hover: hover) {
   .carousel__snapper {
-    animation-name: tonext, snap;
+    animation-name: nextSlide, snapSlide;
     animation-timing-function: ease;
     animation-duration: 4s;
     animation-iteration-count: infinite;
   }
 
   .carousel__slide:last-child .carousel__snapper {
-    animation-name: tostart, snap;
+    animation-name: startSlide, snapSlide;
   }
 }
 
@@ -161,6 +152,7 @@
 }
 
 .carousel__navigation-button {
+  position: relative;
   display: inline-block;
   width: 1.2rem;
   height: 1.2rem;
@@ -170,6 +162,7 @@
   border-radius: 50%;
   font-size: 0;
   vertical-align: top;
+  z-index: 2;
 
   &:hover,
   &:focus {
@@ -190,6 +183,7 @@
   border-radius: 50%;
   font-size: 0;
   outline: 0;
+  z-index: 2;
 }
 
 .carousel::before,
@@ -207,7 +201,7 @@
   content: "";
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
-  z-index: 1;
+  z-index: 2;
   background-size: 1.5rem 1.5rem;
   background-repeat: no-repeat;
   background-position: center center;

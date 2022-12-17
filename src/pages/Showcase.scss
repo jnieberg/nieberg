@@ -1,0 +1,52 @@
+#showcase {
+  max-height: calc(100vh - 8rem - 2px);
+
+  @media screen and (max-width: 768px) {
+    max-height: calc(100vh - 4rem - 2px);
+  }
+
+  .carousel {
+    margin: 0 -2rem -2rem;
+    padding-top: calc(100vh - 10rem - 2px);
+
+    @media screen and (max-width: 768px) {
+      margin: 0 -1.5rem -1.5rem;
+      padding-top: calc(100vh - 6.5rem - 2px);
+    }
+
+    &::before,
+    &::after,
+    .carousel__prev,
+    .carousel__next {
+      margin-top: calc((100vh - 10rem - 2px) / 2);
+
+      @media screen and (max-width: 768px) {
+        margin-top: calc((100vh - 6.5rem - 2px) / 2);
+      }
+    }
+
+    .card {
+      color: #ffffff;
+      justify-content: end;
+
+      > * {
+        text-shadow: -1px 0 1px #000000, 1px 0 1px #000000, 0 -1px 1px #000000, 0 1px 1px #000000;
+      }
+    }
+
+    .card-image::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: transparent;
+      background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 1) 0%,
+        rgba(255, 255, 255, 1) 0%,
+        rgba(255, 255, 255, 0) 25%,
+        rgba(0, 0, 0, 0) 50%,
+        rgba(0, 0, 0, 1) 100%
+      );
+    }
+  }
+}

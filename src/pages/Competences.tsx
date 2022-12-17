@@ -42,8 +42,9 @@ const Competences = () => {
 
         <TabPanel>
           <Rating name="ThreeJS / R3F" value={5} />
-          <Rating name="Visual Studio Code" value={5} />
+          <Rating name="Canvas" value={5} />
           <Rating name="Dialogflow" value={4} />
+          <Rating name="A.I. image/text generators" value={3} />
           <Rating name="WebGL" value={3} />
         </TabPanel>
 
